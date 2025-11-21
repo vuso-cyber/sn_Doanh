@@ -1,0 +1,11 @@
+CREATE DATABASE IF NOT EXISTS birthday CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+USE birthday;
+
+-- Bảng lưu lời chúc
+CREATE TABLE IF NOT EXISTS greetings (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  recipient VARCHAR(100) NOT NULL,
+  sender VARCHAR(100) NOT NULL,
+  message TEXT,
+  created_at DATETIME DEFAULT CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4

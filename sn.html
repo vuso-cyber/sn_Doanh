@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Chúc Mừng Sinh Nhật Doanh 🎉</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700;900&display=swap");
+
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: "Poppins", sans-serif;
+        background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+        height: 100vh;
+        overflow: hidden;
+        color: white;
+        text-align: center;
+      }
+
+      /* Bong bóng bay */
+      .balloon {
+        position: absolute;
+        bottom: -150px;
+        width: 60px;
+        height: 80px;
+        background: radial-gradient(circle, #ff6bcb, #ff0080);
+        border-radius: 50%;
+        animation: fly 8s linear infinite;
+        opacity: 0.85;
+      }
+
+      @keyframes fly {
+        0% {
+          transform: translateY(0) rotate(0deg);
+        }
+        100% {
+          transform: translateY(-110vh) rotate(15deg);
+        }
+      }
+
+      /* Tiêu đề Neon */
+      h1 {
+        margin-top: 70px;
+        font-size: 45px;
+        font-weight: 900;
+        text-shadow: 0 0 10px #ff2e97, 0 0 20px #ff2e97, 0 0 40px #ff2e97;
+        animation: glow 2s ease-in-out infinite alternate;
+      }
+
+      @keyframes glow {
+        from {
+          text-shadow: 0 0 10px #ff2e97;
+        }
+        to {
+          text-shadow: 0 0 25px #ff2e97, 0 0 50px #ff2e97;
+        }
+      }
+
+      .info {
+        font-size: 22px;
+        margin-top: -10px;
+        opacity: 0.9;
+      }
+
+      /* Hiệu ứng trái tim bay */
+      .heart {
+        position: absolute;
+        color: #ff5ca4;
+        font-size: 20px;
+        animation: heartFly 4s linear infinite;
+      }
+
+      @keyframes heartFly {
+        0% {
+          transform: translateY(0) scale(1);
+          opacity: 1;
+        }
+        100% {
+          transform: translateY(-100vh) scale(1.8);
+          opacity: 0;
+        }
+      }
+
+      /* Khung lời chúc */
+      .box {
+        margin-top: 40px;
+        width: 80%;
+        max-width: 500px;
+        padding: 20px;
+        border-radius: 15px;
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(10px);
+        margin-left: auto;
+        margin-right: auto;
+        box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+        animation: fadeIn 2s ease-out;
+      }
+
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .wish {
+        font-size: 20px;
+        line-height: 1.6;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>🎉 CHÚC MỪNG SINH NHẬT DOANH 🎉</h1>
+    <div class="info">
+      Sinh ngày: <b>22/11/2004</b> — Hôm nay bạn <span id="age"></span> tuổi! 🎂
+    </div>
+
+    <div class="box">
+      <div class="wish">
+        Chúc bạn Doanh tuổi mới<br />
+        🎈 Luôn vui vẻ<br />
+        🎈 Sức khỏe dồi dào<br />
+        🎈 Thành công rực rỡ<br />
+        🎈 Tương lai tràn ngập may mắn!<br /><br />
+        Chúc mừng sinh nhật bạn! 💖✨
+      </div>
+    </div>
+
+    <script>
+      // Tính tuổi tự động
+      function calcAge(dob) {
+          let today = new Date();
+          let birth = new Date(dob);
+          let age = today.getFullYear() - birth.getFullYear();
+          let adjust = today < new Date(today.getFullYear(), birth.getMonth(), birth.getDate());
+          return adjust ? age - 1 : age;
+      }
+      document.getElementById("age").textContent = calcAge("2004-11-22");
+
+      // Tạo bong bóng
+      for (let i = 0; i < 15; i++) {
+          let b = document.createElement("div");
+          b.className = "balloon";
+          b.style.left = Math.random() * 100 + "vw";
+          b.style.animationDelay = Math.random() * 5 + "s";
+          b.style.background = radial-gradient(circle, hsl(${Math.random()*360},80%,70%), hsl(${Math.random()*360},80%,50%));
+          document.body.appendChild(b);
+      }
+
+      // Tạo trái tim bay
+      setInterval(() => {
+          let heart = document.createElement("div");
+          heart.className = "heart";
+          heart.innerHTML = "❤";
+          heart.style.left = Math.random() * 100 + "vw";
+          heart.style.animationDuration = (3 + Math.random() * 2) + "s";
+          document.body.appendChild(heart);
+          setTimeout(() => heart.remove(), 5000);
+      }, 600);
+    </script>
+  </body>
+</html>
