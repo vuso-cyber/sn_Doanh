@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="vi">
   <head>
@@ -258,3 +259,265 @@
     </script>
   </body>
 </html>
+=======
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Happy Birthday Doanh</title>
+    <style>
+      body {
+        margin: 0;
+        background: linear-gradient(180deg, #ff9bd1, #ffd4e5, #fff1fb);
+        font-family: "Poppins", sans-serif;
+        overflow-x: hidden;
+      }
+
+      /* Hiệu ứng chữ */
+      h1 {
+        text-align: center;
+        margin-top: 50px;
+        font-size: 60px;
+        color: #ff2f7b;
+        text-shadow: 0 0 10px #fff, 0 0 20px #ff6fb0;
+        animation: glow 2s infinite alternate;
+      }
+
+      @keyframes glow {
+        from {
+          text-shadow: 0 0 10px #fff;
+        }
+        to {
+          text-shadow: 0 0 30px #ff2f7b, 0 0 60px #ff6fb0;
+        }
+      }
+
+      h2 {
+        text-align: center;
+        color: #ff559c;
+        margin-top: -10px;
+      }
+
+      /* Bánh sinh nhật */
+      .cake {
+        width: 220px;
+        height: 150px;
+        background: #ff66aa;
+        margin: 50px auto;
+        border-radius: 10px 10px 0 0;
+        position: relative;
+        box-shadow: 0 0 20px #ff8ec6;
+      }
+
+      .cake::before {
+        content: "";
+        width: 220px;
+        height: 25px;
+        background: #ffd6e8;
+        position: absolute;
+        bottom: -25px;
+        border-radius: 0 0 10px 10px;
+      }
+
+      /* Nến */
+      .candle {
+        width: 10px;
+        height: 40px;
+        background: #fff;
+        position: absolute;
+        top: -40px;
+        left: 50%;
+        transform: translateX(-50%);
+        border-radius: 5px;
+        animation: candleGlow 1s infinite alternate;
+      }
+
+      .flame {
+        width: 15px;
+        height: 25px;
+        background: radial-gradient(circle, yellow, orange, red);
+        position: absolute;
+        top: -25px;
+        left: 50%;
+        transform: translateX(-50%);
+        border-radius: 50%;
+        animation: flame 0.5s infinite alternate;
+      }
+
+      @keyframes flame {
+        from {
+          transform: translateX(-50%) scale(1);
+        }
+        to {
+          transform: translateX(-50%) scale(1.2);
+        }
+      }
+
+      /* Bóng bay */
+      .balloon {
+        position: absolute;
+        width: 60px;
+        height: 80px;
+        border-radius: 50%;
+        background: red;
+        animation: fly 6s infinite ease-in;
+      }
+
+      @keyframes fly {
+        from {
+          transform: translateY(100vh);
+          opacity: 1;
+        }
+        to {
+          transform: translateY(-120vh);
+          opacity: 0.8;
+        }
+      }
+
+      /* Trái tim */
+      .heart {
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        background: #ff2f7b;
+        transform: rotate(45deg);
+        animation: floatHeart 5s infinite ease-in-out;
+      }
+
+      .heart:before,
+      .heart:after {
+        content: "";
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        background: #ff2f7b;
+        border-radius: 50%;
+      }
+      .heart:before {
+        top: -10px;
+        left: 0;
+      }
+      .heart:after {
+        left: -10px;
+        top: 0;
+      }
+
+      @keyframes floatHeart {
+        from {
+          transform: translateY(0) rotate(45deg);
+          opacity: 1;
+        }
+        to {
+          transform: translateY(-200px) rotate(45deg);
+          opacity: 0;
+        }
+      }
+
+      /* Hoa hồng */
+      .rose {
+        position: absolute;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        background: radial-gradient(circle, #ff3b7d, #b30047);
+        animation: roseFloat 7s infinite;
+      }
+
+      @keyframes roseFloat {
+        0% {
+          transform: translateY(0);
+          opacity: 1;
+        }
+        100% {
+          transform: translateY(-200px);
+          opacity: 0;
+        }
+      }
+
+      /* Nút nhạc */
+      #musicBtn {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background: #ff2f7b;
+        color: white;
+        padding: 12px 20px;
+        border: none;
+        border-radius: 30px;
+        cursor: pointer;
+        box-shadow: 0 0 10px #ff8ec6;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>🎉 Happy Birthday Doanh 🎉</h1>
+    <h2>Sinh ngày 22/11/2004</h2>
+    <h2>Chúc bạn tôi SNVV</h2>
+
+    <!-- Bánh sinh nhật -->
+    <div class="cake">
+      <div class="candle"></div>
+      <div class="flame"></div>
+    </div>
+
+    <!-- Nhạc -->
+    <audio id="birthdayMusic" loop>
+      <source
+        src="https://video.search.yahoo.com/search/video;_ylt=AwrOoQskjyBpOFoCQ6BXNyoA;_ylu=Y29sbwNncTEEcG9zAzEEdnRpZAMEc2VjA3Nj?type=E210US91215G0&p=link+nh%E1%BA%A1c+sinh+nh%E1%BA%ADt&fr=mcafee&turl=https%3A%2F%2Ftse2.mm.bing.net%2Fth%2Fid%2FOVP.sevI4MX3QOTPuBJHJiCkugHgFo%3Fpid%3DApi%26w%3D296%26h%3D156%26c%3D7%26p%3D0&rurl=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3D5DcKlZnmVNs&tit=B%C3%A0i+H%C3%A1t+Ch%C3%BAc+M%E1%BB%ABng+Sinh+Nh%E1%BA%ADt+Ti%E1%BA%BFng+Vi%E1%BB%87t+%F0%9F%8E%82+Nh%E1%BA%A1c+Ch%C3%BAc+M%E1%BB%ABng+Sinh+Nh%E1%BA%ADt+%5BREMIX%5D+%F0%9F%8E%81+Happy+Birthday+Song&pos=01&vid=6b74aa25aa16bfa8c947b62aa64e3c8e&sigr=_yq46uw8jJPl&sigt=tvbpDsFc6YhF&sigi=cjhz_68916tV"
+      />
+    </audio>
+
+    <button id="musicBtn">🎵 Bật nhạc</button>
+
+    <script>
+      // Tạo bóng bay ngẫu nhiên
+      function createBalloon() {
+        const balloon = document.createElement("div");
+        balloon.className = "balloon";
+        balloon.style.background = `hsl(${Math.random() * 360},90%,60%)`;
+        balloon.style.left = Math.random() * 100 + "vw";
+        balloon.style.animationDuration = 4 + Math.random() * 5 + "s";
+        document.body.appendChild(balloon);
+        setTimeout(() => balloon.remove(), 9000);
+      }
+      setInterval(createBalloon, 800);
+
+      // Trái tim bay
+      function createHeart() {
+        const heart = document.createElement("div");
+        heart.className = "heart";
+        heart.style.left = Math.random() * 100 + "vw";
+        heart.style.top = "100vh";
+        document.body.appendChild(heart);
+        setTimeout(() => heart.remove(), 6000);
+      }
+      setInterval(createHeart, 500);
+
+      // Hoa hồng rơi
+      function createRose() {
+        const rose = document.createElement("div");
+        rose.className = "rose";
+        rose.style.left = Math.random() * 100 + "vw";
+        rose.style.top = "100vh";
+        document.body.appendChild(rose);
+        setTimeout(() => rose.remove(), 7000);
+      }
+      setInterval(createRose, 900);
+
+      // Nhạc sinh nhật
+      const btn = document.getElementById("musicBtn");
+      const music = document.getElementById("birthdayMusic");
+
+      btn.onclick = () => {
+        if (music.paused) {
+          music.play();
+          btn.innerText = "⏸ Tắt nhạc";
+        } else {
+          music.pause();
+          btn.innerText = "🎵 Bật nhạc";
+        }
+      };
+    </script>
+  </body>
+</html>
+>>>>>>> 47e1b3468c6a439d047fe034eb48d46a80493345
